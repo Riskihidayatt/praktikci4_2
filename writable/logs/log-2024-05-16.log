@@ -1,0 +1,978 @@
+ERROR - 2024-05-16 01:42:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_ari', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Pegawai_Model.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Pegawai.php(14): App\Models\Pegawai_model->getPegawai()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#10 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\app\Models\Pegawai_Model.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\app\Controllers\Pegawai.php(14): App\Models\Pegawai_model->getPegawai()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-05-16 01:42:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pegawai]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pegawai`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Pegawai_Model.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Pegawai.php(14): App\Models\Pegawai_model->getPegawai()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-05-16 01:42:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_ari', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#10 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\app\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\app\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-05-16 01:42:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penggajian`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-05-16 01:43:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_ari', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#10 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\app\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\app\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-05-16 01:43:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penggajian`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Penggajian_Model.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Penggajian.php(14): App\Models\Penggajian_Model->getPenggajian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 01:45:36 --> ErrorException: Undefined variable $pegawai_list
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 140.
+ 1 APPPATH\Views\penggajian\employee_view.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai_list', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 140)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(15): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:29:02 --> BadMethodCallException: Call to undefined method App\Models\Penggajian_Model::getPenggajian
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(22): CodeIgniter\Model->__call('getPenggajian', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:30:58 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 34.
+ 1 APPPATH\Views\penggajian\employee_view.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(23): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:31:49 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(23): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:32:39 --> BadMethodCallException: Call to undefined method App\Models\Penggajian_Model::getPegawai
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(23): CodeIgniter\Model->__call('getPegawai', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:33:12 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(25): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:34:35 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:04 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:05 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:05 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:06 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:06 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:06 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:06 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:35:06 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:46:37 --> ErrorException: Undefined variable $getPenggajian
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 31.
+ 1 APPPATH\Views\penggajian\employee_view.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getPenggajian', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:46:57 --> ErrorException: Undefined variable $pegawai
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 76.
+ 1 APPPATH\Views\penggajian\employee_view.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 76)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:47:13 --> ErrorException: Undefined variable $title
+[Method: GET, Route: penggajian]
+in APPPATH\Views\header.php on line 5.
+ 1 APPPATH\Views\header.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\header.php', 5)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('header', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 6 APPPATH\Controllers\Penggajian.php(26): view('penggajian/employee_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:54:44 --> BadMethodCallException: Call to undefined method App\Models\Pegawai_model::getAllPegawai
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(24): CodeIgniter\Model->__call('getAllPegawai', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:54:56 --> ErrorException: Undefined array key "nama_pegawai"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 35.
+ 1 APPPATH\Views\penggajian\employee_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pegawai"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(28): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 14:59:15 --> ArgumentCountError: Too few arguments to function App\Controllers\Penggajian::index(), 0 passed in C:\xampp\htdocs\ci4\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: penggajian]
+in APPPATH\Controllers\Penggajian.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 15:06:32 --> BadMethodCallException: Call to undefined method App\Models\Pegawai_model::getAll
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(24): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 15:07:18 --> BadMethodCallException: Call to undefined method App\Models\Pegawai_model::getAll
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(24): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 15:07:19 --> BadMethodCallException: Call to undefined method App\Models\Pegawai_model::getAll
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Penggajian.php(24): CodeIgniter\Model->__call('getAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:14:52 --> ErrorException: Undefined array key "pedetar"
+[Method: GET, Route: pegawai]
+in APPPATH\Views\pegawai\employee_view.php on line 49.
+ 1 APPPATH\Views\pegawai\employee_view.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pedetar"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\pegawai\\employee_view.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\pegawai\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pegawai/employee_view', [], true)
+ 5 APPPATH\Controllers\Pegawai.php(15): view('pegawai/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:27:11 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 31.
+ 1 APPPATH\Views\penggajian\employee_view.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(28): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:31:26 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 31.
+ 1 APPPATH\Views\penggajian\employee_view.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(28): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:45:26 --> ErrorException: Undefined array key "nama_tunjangan"
+[Method: GET, Route: penggajian]
+in APPPATH\Views\penggajian\employee_view.php on line 107.
+ 1 APPPATH\Views\penggajian\employee_view.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_tunjangan"', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php', 107)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penggajian\\employee_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/employee_view', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(39): view('penggajian/employee_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:55:50 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(38): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:57:00 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(38): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:57:17 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(38): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:58:59 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 22:59:14 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:00:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(42): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:00:37 --> Exception: Invalid kode_penggajian
+[Method: GET, Route: penggajian]
+in APPPATH\Models\Penggajian_Model.php on line 30.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:00:49 --> Exception: Invalid kode_penggajian
+[Method: GET, Route: penggajian]
+in APPPATH\Models\Penggajian_Model.php on line 30.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:00:50 --> Exception: Invalid kode_penggajian
+[Method: GET, Route: penggajian]
+in APPPATH\Models\Penggajian_Model.php on line 30.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:01:51 --> Exception: Invalid kode_penggajian
+[Method: GET, Route: penggajian]
+in APPPATH\Models\Penggajian_Model.php on line 30.
+ 1 APPPATH\Controllers\Penggajian.php(35): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-05-16 23:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 23:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 23:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 23:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 23:06:27 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(54): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:07:17 --> ErrorException: Undefined variable $sdata
+[Method: POST, Route: penggajian/add]
+in APPPATH\Controllers\Penggajian.php on line 53.
+ 1 APPPATH\Controllers\Penggajian.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sdata', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Penggajian.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:08:31 --> ArgumentCountError: Too few arguments to function App\Models\Penggajian_Model::getAllPenggajianbyPegawai(), 0 passed in C:\xampp\htdocs\ci4\app\Controllers\Penggajian.php on line 50 and exactly 1 expected
+[Method: POST, Route: penggajian/add]
+in APPPATH\Models\Penggajian_Model.php on line 18.
+ 1 APPPATH\Controllers\Penggajian.php(50): App\Models\Penggajian_Model->getAllPenggajianbyPegawai()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:10:26 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:13:15 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:15:23 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:16:01 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:17:04 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:17:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:25:47 --> Exception: Invalid input: kode_penggajian is required
+[Method: POST, Route: penggajian/add]
+in APPPATH\Controllers\Penggajian.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:25:57 --> Exception: Invalid input: kode_penggajian must be a string or integer
+[Method: GET, Route: penggajian/]
+in APPPATH\Models\Penggajian_Model.php on line 22.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:26:10 --> Exception: Invalid input: kode_penggajian must be a string or integer
+[Method: GET, Route: penggajian/]
+in APPPATH\Models\Penggajian_Model.php on line 22.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:26:15 --> Exception: Invalid input: kode_penggajian must be a string or integer
+[Method: GET, Route: penggajian]
+in APPPATH\Models\Penggajian_Model.php on line 22.
+ 1 APPPATH\Controllers\Penggajian.php(28): App\Models\Penggajian_Model->getAllPenggajianbyPegawai(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:28:45 --> Exception: Invalid input: kode_penggajian is required
+[Method: POST, Route: penggajian/add]
+in APPPATH\Controllers\Penggajian.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:29:20 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(36): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:30:25 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(36): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:30:40 --> ErrorException: Array to string conversion
+[Method: POST, Route: penggajian/add]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `penggajian` (`pegawai`, `tunjangan`, `potongan`, `penggajian`) VALUES (:pegawai:, :tunjangan:, :potongan:, :penggajian:)', [...], false)
+ 7 APPPATH\Models\Penggajian_Model.php(36): CodeIgniter\Database\BaseBuilder->insert([...])
+ 8 APPPATH\Controllers\Penggajian.php(56): App\Models\Penggajian_Model->savePenggajian([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-16 23:41:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penggajian/add.php"
+[Method: GET, Route: penggajian/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penggajian/add.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penggajian/add', [], true)
+ 3 APPPATH\Controllers\Penggajian.php(57): view('penggajian/add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')

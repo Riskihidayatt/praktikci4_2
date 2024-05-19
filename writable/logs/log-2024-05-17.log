@@ -1,0 +1,66 @@
+ERROR - 2024-05-17 03:35:28 --> mysqli_sql_exception: Unknown column 'kode_user' in 'where clause' in C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `pegawai...', 0)
+#1 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pegawai...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pegawai...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `pegawai...', Array, false)
+#4 C:\xampp\htdocs\ci4\app\Models\Pegawai_Model.php(29): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Pegawai.php(88): App\Models\Pegawai_model->editPegawai(Array, NULL)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(933): App\Controllers\Pegawai->update('$1')
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci4\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-05-17 03:35:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_user' in 'where clause'
+[Method: POST, Route: pegawai/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `pegawai` SET `nama_pegawai` = :nama_pegawai:, `tmpt_lahir` = :tmpt_lahir:, `tgl_lahir` = :tgl_lahir:, `agama` = :agama:, `pedetar` = :pedetar:, `jenis_kelamin` = :jenis_kelamin:, `tmt` = :tmt:, `golongan` = :golongan:, `jabatan` = :jabatan:, `status_pegawai` = :status_pegawai:, `status_pernikahan` = :status_pernikahan:, `jumlah_anak` = :jumlah_anak:, `alamat` = :alamat:, `gaji_pokok` = :gaji_pokok:, `no_tlp` = :no_tlp:
+WHERE `kode_user` IS NULL', [...], false)
+ 2 APPPATH\Models\Pegawai_Model.php(29): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Pegawai.php(88): App\Models\Pegawai_model->editPegawai([...], null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->update('$1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 03:35:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pegawai` SET `nama_pegawai` = \'Ari\', `tmpt_lahir` = NULL, `tgl_lahir` = \'\', `agama` = \'Islam\', `pedetar` = \'Sma\', `jenis_kelamin` = \'\', `tmt` = \'\', `golongan` = \'\', `jabatan` = \'Admin\', `status_pegawai` = \'\', `status_pernikahan` = \'\', `jumlah_anak` = \'0\', `alamat` = \'Lampung\', `gaji_pokok` = \'10000\', `no_tlp` = \'101028222\'
+WHERE `kode_user` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pegawai` SET `nama_pegawai` = \'Ari\', `tmpt_lahir` = NULL, `tgl_lahir` = \'\', `agama` = \'Islam\', `pedetar` = \'Sma\', `jenis_kelamin` = \'\', `tmt` = \'\', `golongan` = \'\', `jabatan` = \'Admin\', `status_pegawai` = \'\', `status_pernikahan` = \'\', `jumlah_anak` = \'0\', `alamat` = \'Lampung\', `gaji_pokok` = \'10000\', `no_tlp` = \'101028222\'
+WHERE `kode_user` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `pegawai` SET `nama_pegawai` = :nama_pegawai:, `tmpt_lahir` = :tmpt_lahir:, `tgl_lahir` = :tgl_lahir:, `agama` = :agama:, `pedetar` = :pedetar:, `jenis_kelamin` = :jenis_kelamin:, `tmt` = :tmt:, `golongan` = :golongan:, `jabatan` = :jabatan:, `status_pegawai` = :status_pegawai:, `status_pernikahan` = :status_pernikahan:, `jumlah_anak` = :jumlah_anak:, `alamat` = :alamat:, `gaji_pokok` = :gaji_pokok:, `no_tlp` = :no_tlp:
+WHERE `kode_user` IS NULL', [...], false)
+ 4 APPPATH\Models\Pegawai_Model.php(29): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Pegawai.php(88): App\Models\Pegawai_model->editPegawai([...], null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->update('$1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 03:35:28 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `pegawai` SET `nama_pegawai` = \'Ari\', `tmpt_lahir` = NULL, `tgl_lahir` = \'\', `agama` = \'Islam\', `pedetar` = \'Sma\', `jenis_kelamin` = \'\', `tmt` = \'\', `golongan` = \'\', `jabatan` = \'Admin\', `status_pegawai` = \'\', `status_pernikahan` = \'\', `jumlah_anak` = \'0\', `alamat` = \'Lampung\', `gaji_pokok` = \'10000\', `no_tlp` = \'101028222\'
+WHERE `kode_user` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pegawai` SET `nama_pegawai` = \'Ari\', `tmpt_lahir` = NULL, `tgl_lahir` = \'\', `agama` = \'Islam\', `pedetar` = \'Sma\', `jenis_kelamin` = \'\', `tmt` = \'\', `golongan` = \'\', `jabatan` = \'Admin\', `status_pegawai` = \'\', `status_pernikahan` = \'\', `jumlah_anak` = \'0\', `alamat` = \'Lampung\', `gaji_pokok` = \'10000\', `no_tlp` = \'101028222\'
+WHERE `kode_user` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pegawai` SET `nama_pegawai` = \'Ari\', `tmpt_lahir` = NULL, `tgl_lahir` = \'\', `agama` = \'Islam\', `pedetar` = \'Sma\', `jenis_kelamin` = \'\', `tmt` = \'\', `golongan` = \'\', `jabatan` = \'Admin\', `status_pegawai` = \'\', `status_pernikahan` = \'\', `jumlah_anak` = \'0\', `alamat` = \'Lampung\', `gaji_pokok` = \'10000\', `no_tlp` = \'101028222\'
+WHERE `kode_user` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `pegawai` SET `nama_pegawai` = :nama_pegawai:, `tmpt_lahir` = :tmpt_lahir:, `tgl_lahir` = :tgl_lahir:, `agama` = :agama:, `pedetar` = :pedetar:, `jenis_kelamin` = :jenis_kelamin:, `tmt` = :tmt:, `golongan` = :golongan:, `jabatan` = :jabatan:, `status_pegawai` = :status_pegawai:, `status_pernikahan` = :status_pernikahan:, `jumlah_anak` = :jumlah_anak:, `alamat` = :alamat:, `gaji_pokok` = :gaji_pokok:, `no_tlp` = :no_tlp:
+WHERE `kode_user` IS NULL', [...], false)
+ 5 APPPATH\Models\Pegawai_Model.php(29): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Pegawai.php(88): App\Models\Pegawai_model->editPegawai([...], null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->update('$1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
