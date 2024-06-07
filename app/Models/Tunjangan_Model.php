@@ -1,13 +1,13 @@
 <?php
- 
+
 namespace App\Models;
- 
+
 use CodeIgniter\Model;
- 
+
 class Tunjangan_model extends Model
 {
     protected $table = 'tunjangan';
- 
+
     public function getTunjangan($kode_tunjangan = false)
     {
         if ($kode_tunjangan === false) {
@@ -16,7 +16,7 @@ class Tunjangan_model extends Model
             return $this->getWhere(['kode_tunjangan' => $kode_tunjangan]);
         }
     }
- 
+
     public function saveTunjangan($data)
     {
         $builder = $this->db->table($this->table);

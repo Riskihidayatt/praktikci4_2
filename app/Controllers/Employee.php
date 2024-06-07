@@ -15,7 +15,7 @@ class Employee extends Controller
         echo view('konten/karyawan/employee_view', $data);
         
     }
-
+    
     public function add()
     {
         $model = new Employee_model;

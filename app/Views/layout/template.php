@@ -25,7 +25,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link active" href="#">Data Pegawai</a>
-        <a class="nav-link active" href="../konten/employee/employee_view.php">Data Vaksin</a>
+        <a class="nav-link active" href="konten/employee/employee_view.php">Data Vaksin</a>
         <a class="nav-link active" href="#">Penggajian</a>
 
         
